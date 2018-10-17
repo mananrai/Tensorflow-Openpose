@@ -64,6 +64,21 @@ if __name__ == '__main__':
         net, _, last_layer = get_network(args.model, input_node, sess)
 
         cam = cv2.VideoCapture(args.camera)
+        for camera_index in range(5):
+            camera = cv2.VideoCapture(camera_index)
+            try:
+                print("#" + str(camera_index) + " : ", camera)
+                # for property, value in vars(camera).iteritems():
+                #    print(property, ": ", value)
+                print(dir(camera))
+            except:
+                print("#" + str(camera_index) + " : ")
+                # for property, value in vars(camera).iteritems():
+                #    print(property, ": ", value)
+            if not camera.isOpened():
+                print("--- Couldn't open ---")
+        _ = input("That's it!")
+        
         ret_val, img = cam.read()
         logging.info('cam image=%dx%d' % (img.shape[1], img.shape[0]))
 

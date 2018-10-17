@@ -17,7 +17,7 @@ import tensorflow as tf
 from tensorpack import imgaug
 from tensorpack.dataflow.image import MapDataComponent, AugmentImageComponent
 from tensorpack.dataflow.common import BatchData, MapData, TestDataSpeed
-from tensorpack.dataflow.prefetch import PrefetchData
+from tensorpack.dataflow import PrefetchData
 from tensorpack.dataflow.base import RNGDataFlow, DataFlowTerminated
 
 from datum_pb2 import Datum

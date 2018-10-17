@@ -84,6 +84,7 @@ if __name__ == '__main__':
         a = time.time()
         humans = estimate_pose(heatMat, pafMat)
         logging.info('pose- elapsed_time={}'.format(time.time() - a))
+        print(humans)
 
         logging.info('image={} heatMap={} pafMat={}'.format(image.shape, heatMat.shape, pafMat.shape))
         process_img = CocoPoseLMDB.display_image(image, heatMat, pafMat, as_numpy=True)
