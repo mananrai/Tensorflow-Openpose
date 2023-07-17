@@ -34,8 +34,8 @@ You need dependencies below.
 ### Install
 
 ```bash
-$ git clone https://www.github.com/ildoonet/tf-openpose
-$ cd tf-openpose
+$ git clone https://github.com/mananrai/Tensorflow-Openpose
+$ cd Tensorflow-Openpose
 $ pip3 install -r requirements.txt
 ```
 
